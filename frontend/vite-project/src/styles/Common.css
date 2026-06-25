@@ -1,0 +1,127 @@
+/* ==========================
+   Section Title
+========================== */
+
+.section-title {
+  margin: 0 0 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ==========================
+   Form Container
+========================== */
+
+.form-container {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  font-size: 15px;
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #64748b;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.primary-btn {
+  background: #475569;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px 20px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #334155;
+}
+
+/* ==========================
+   Common Card
+========================== */
+
+.info-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+  margin-bottom: 20px;
+}
+
+.info-card p {
+  margin: 8px 0;
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+
+.action-buttons {
+  margin-top: 15px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background: #e5e7eb;
+  color: #222;
+}
+
+.edit-btn:hover {
+  background: #d1d5db;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}

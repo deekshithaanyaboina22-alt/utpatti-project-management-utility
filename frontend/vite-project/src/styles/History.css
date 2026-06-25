@@ -1,0 +1,38 @@
+/* ==========================
+   History Page
+========================== */
+
+.info-card {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.history-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+}
+
+.history-user {
+  margin-top: 12px;
+}
+
+.history-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 18px 0;
+}
+
+.history-status,
+.history-date {
+  margin: 8px 0;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+
+  .info-card {
+    max-width: 100%;
+  }
+}
