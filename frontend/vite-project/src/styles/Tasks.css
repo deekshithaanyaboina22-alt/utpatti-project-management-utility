@@ -37,7 +37,7 @@
 
 .action-buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
   margin-top: 15px;
 }
@@ -81,6 +81,11 @@
   border: none;
   border-top: 1px solid #e5e7eb;
   margin: 18px 0;
+}
+
+.action-buttons button {
+  width: 110px;
+  margin-top: 0;
 }
 
 @media (max-width: 768px) {

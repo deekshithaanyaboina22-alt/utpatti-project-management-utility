@@ -45,16 +45,9 @@ function App() {
       >
         Tasks
       </NavLink>
+      </nav>
 
-      <NavLink
-        to="/history"
-        className={({ isActive }) =>
-          isActive ? "active-link" : "nav-link"
-        }
-      >
-        History
-      </NavLink>
-    </nav>
+      
 
     <main className="page-content">
       <Routes>
@@ -62,6 +55,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/history" element={<History />} />
+        <Route path="/history/:taskId" element={<History />} />
       </Routes>
     </main>
   </div>

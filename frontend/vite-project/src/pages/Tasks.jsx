@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import "../styles/Common.css";
 import "../styles/Tasks.css";
 
 function Tasks() {
+  const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   const [users, setUsers] = useState([]);
   const [title, setTitle] = useState("");
@@ -193,19 +195,26 @@ const editTask = (task) => {
   </div>
 
   <div className="action-buttons">
-    <button
-      className="edit-btn"
-      onClick={() => editTask(task)}
-    >
-      Edit
-    </button>
+   <button
+  className="edit-btn"
+  onClick={() => editTask(task)}
+>
+  Edit
+</button>
 
-    <button
-      className="delete-btn"
-      onClick={() => deleteTask(task._id)}
-    >
-      Delete
-    </button>
+<button
+  className="primary-btn"
+  onClick={() => navigate(`/history/${task._id}`)}
+>
+  View
+</button>
+
+<button
+  className="delete-btn"
+  onClick={() => deleteTask(task._id)}
+>
+  Delete
+</button>
   </div>
 
 </div>

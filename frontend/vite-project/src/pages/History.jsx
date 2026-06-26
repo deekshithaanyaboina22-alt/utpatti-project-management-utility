@@ -1,26 +1,42 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import api from "../services/api";
 import "../styles/Common.css";
 import "../styles/History.css";
 
 function History() {
+  const { taskId } = useParams();
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
-    fetchHistory();
-  }, []);
+  if (!taskId) return;
+
+  fetchHistory();
+}, [taskId]);
 
   const fetchHistory = async () => {
     try {
-      const response = await api.get(
-        "/tasks/6a3c140f5da97f1566f700be/history"
-      );
+      const response = await api.get(`/tasks/${taskId}/history`);
 
       setHistory(response.data);
     } catch (error) {
       console.error(error);
     }
   };
+  if (!taskId) {
+  return (
+    <div>
+      <h2 className="section-title">Task History</h2>
+
+      <div className="info-card">
+        <p>
+          Please select a task from the <strong>Tasks</strong> page and click
+          <strong> View History</strong> to see its complete status history.
+        </p>
+      </div>
+    </div>
+  );
+}
 
   return (
   <div>
